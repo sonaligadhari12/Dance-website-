@@ -4,111 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rhythm Within — Dance Education for Every Age</title>
-  <meta name="description" content="Learn dance through culture, rhythm and confidence. Explore age-based dance paths for kids, teens and adults with popular dance styles and beginner lessons." />
+  <meta name="description" content="A vibrant dance education website with age-based learning, popular dance styles, beginner lessons, cultural notes and real human dance visuals." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="stage-bg" aria-hidden="true">
-    <span class="orb orb-one"></span><span class="orb orb-two"></span><span class="orb orb-three"></span>
-    <span class="rhythm-line line-one"></span><span class="rhythm-line line-two"></span>
-  </div>
-
+  <div class="stage-bg" aria-hidden="true"><span></span><span></span><span></span></div>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Rhythm Within home">
-      <span class="brand-mark">RW</span>
-      <span><strong>Rhythm Within</strong><small>Dance. Culture. Confidence.</small></span>
-    </a>
+    <a class="brand" href="#top"><span class="brand-icon">RW</span><span><strong>Rhythm Within</strong><small>Dance. Culture. Confidence.</small></span></a>
     <button class="menu-toggle" aria-label="Open menu">☰</button>
     <nav class="nav-links">
-      <a href="#age-paths">Age Groups</a>
-      <a href="#styles">Dance Styles</a>
-      <a href="#lessons">Lessons</a>
-      <a href="#culture">Culture</a>
-      <a href="#contact" class="nav-cta">Start Learning</a>
+      <a href="#age-paths">Age Groups</a><a href="#styles">Dance Styles</a><a href="#lessons">Lessons</a><a href="#gallery">Gallery</a><a href="#contact" class="nav-cta">Start Learning</a>
     </nav>
   </header>
-
   <main id="top">
     <section class="hero section-pad">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Premium dance education for all ages</p>
-        <h1>Learn dance as movement, culture, rhythm and confidence.</h1>
-        <p class="hero-text">A vibrant learning platform for kids, teens and adults to discover popular dance styles, understand their cultural meaning, and begin with simple practice lessons.</p>
-        <div class="hero-actions">
-          <a href="#age-paths" class="btn primary">Choose Your Age Path</a>
-          <a href="#styles" class="btn secondary">Explore Styles</a>
-        </div>
+        <p class="eyebrow">Premium dance education for every age</p>
+        <h1>Let every step tell your story.</h1>
+        <p class="hero-text">Explore dance through culture, rhythm, confidence and expression. Choose your age group, discover the most loved dance forms, and begin with simple guided lessons.</p>
+        <div class="hero-actions"><a class="btn primary" href="#age-paths">Choose Your Age Path</a><a class="btn secondary" href="#styles">Explore Dance Styles</a></div>
+        <div class="trust-row"><span>12+ styles</span><span>Kids, Teens & Adults</span><span>Beginner friendly</span></div>
       </div>
-      <div class="hero-panel reveal">
-        <div class="pulse-ring"></div>
-        <div class="meter-card"><span>12+</span><small>Dance styles</small></div>
-        <div class="meter-card"><span>36</span><small>Mini lessons</small></div>
-        <div class="meter-card"><span>3</span><small>Age paths</small></div>
-      </div>
+      <div class="hero-visual reveal"><img src="assets/images/hero-dancers.jpg" alt="A group of dancers performing different dance styles on a colorful stage"></div>
     </section>
 
     <section id="age-paths" class="section-pad">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Age-based learning</p>
-        <h2>Popular dances by age group</h2>
-        <p>Click Kids, Teens or Adults. Then choose a dance style to see why that age group loves it and how to begin.</p>
+      <div class="section-heading reveal"><p class="eyebrow">Age-based learning</p><h2>Popular dances by age group</h2><p>Click an age group, then select any mini tab to see the explanation, image, skills and beginner lesson for that dance.</p></div>
+      <div class="age-card-row reveal">
+        <button class="age-card active" data-age="kids"><img src="assets/images/kids.jpg" alt="Kids dancing"><span><strong>Kids</strong><small>4–12 years</small></span></button>
+        <button class="age-card" data-age="teens"><img src="assets/images/teens.jpg" alt="Teen dancer"><span><strong>Teens</strong><small>13–18 years</small></span></button>
+        <button class="age-card" data-age="adults"><img src="assets/images/adults.jpg" alt="Adult dancer"><span><strong>Adults</strong><small>19+ years</small></span></button>
       </div>
-
-      <div class="age-tabs reveal" role="tablist" aria-label="Age groups">
-        <button class="age-tab active" data-age="kids">👧 Kids 4–12</button>
-        <button class="age-tab" data-age="teens">🧑 Teens 13–18</button>
-        <button class="age-tab" data-age="adults">👨 Adults 19+</button>
-      </div>
-
-      <div class="learning-shell reveal">
-        <aside class="style-menu" id="ageStyleMenu" aria-label="Dance styles for selected age group"></aside>
-        <article class="learning-card" id="ageContent"></article>
-      </div>
+      <div class="learning-shell reveal"><aside class="style-menu" id="ageStyleMenu"></aside><article class="learning-card" id="ageContent"></article></div>
     </section>
 
     <section id="styles" class="section-pad">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Dance library</p>
-        <h2>Explore the styles</h2>
-        <p>Each card explains the feel, origin, key skills and best reason to learn that style.</p>
-      </div>
+      <div class="section-heading reveal"><p class="eyebrow">Dance library</p><h2>Explore dance styles</h2><p>Each style includes a real human visual, origin, personality and the best reason to start learning it.</p></div>
       <div class="style-grid reveal" id="styleGrid"></div>
     </section>
 
     <section id="lessons" class="section-pad split-section">
-      <div class="section-heading reveal compact">
-        <p class="eyebrow">Beginner lesson path</p>
-        <h2>Start with a simple 4-week routine</h2>
-        <p>This routine works for most beginner dance styles and helps build rhythm, control and confidence.</p>
-      </div>
-      <div class="timeline reveal">
-        <div><strong>Week 1</strong><span>Warm-up, posture, counting beats, basic footwork.</span></div>
-        <div><strong>Week 2</strong><span>Add hand movement, turns, expressions and short combinations.</span></div>
-        <div><strong>Week 3</strong><span>Practice musicality, transitions, confidence and clean endings.</span></div>
-        <div><strong>Week 4</strong><span>Create a 45–60 second routine and perform it with energy.</span></div>
-      </div>
+      <div class="section-heading reveal compact"><p class="eyebrow">Beginner lesson path</p><h2>A simple 4-week dance routine</h2><p>This starter path works for most styles and helps learners build rhythm, posture, memory and stage confidence.</p></div>
+      <div class="timeline reveal"><div><strong>Week 1</strong><span>Warm-up, posture, counting beats, basic footwork.</span></div><div><strong>Week 2</strong><span>Add hand movement, expressions, turns and short combinations.</span></div><div><strong>Week 3</strong><span>Practice musicality, transitions, clean endings and confidence.</span></div><div><strong>Week 4</strong><span>Create a 45–60 second routine and perform with energy.</span></div></div>
     </section>
 
-    <section id="culture" class="section-pad culture-band reveal">
-      <p class="eyebrow">Culture and meaning</p>
-      <h2>Dance is more than steps.</h2>
-      <p>Every style carries a story: celebration, discipline, identity, rhythm, theatre, fitness or community. This website teaches technique together with meaning, so learners understand both movement and emotion.</p>
-    </section>
-
-    <section id="contact" class="section-pad final-cta reveal">
-      <h2>Begin with one rhythm, one step, one moment of confidence.</h2>
-      <a href="mailto:hello@example.com" class="btn primary">Contact to Learn More</a>
-    </section>
+    <section id="gallery" class="section-pad"><div class="section-heading reveal"><p class="eyebrow">Gallery</p><h2>Dance in motion</h2><p>Visual examples of styles included in the learning platform.</p></div><div class="mini-gallery reveal" id="miniGallery"></div></section>
+    <section id="contact" class="section-pad final-cta reveal"><h2>Begin with one rhythm, one step, one moment of confidence.</h2><a class="btn primary" href="mailto:hello@example.com">Contact to Learn More</a></section>
   </main>
-
-  <footer>
-    <strong>Rhythm Within</strong>
-    <span>Premium dance education website concept.</span>
-  </footer>
-
+  <footer><strong>Rhythm Within</strong><span>Premium dance education website concept.</span></footer>
   <script src="script.js"></script>
 </body>
 </html>
